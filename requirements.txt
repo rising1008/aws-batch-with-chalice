@@ -1,0 +1,4 @@
+boto3==1.21.36
+requests==2.27.1
+aws-lambda-powertools==1.25.6
+Inject==4.3.1

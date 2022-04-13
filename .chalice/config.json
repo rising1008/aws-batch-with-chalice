@@ -1,0 +1,16 @@
+{
+  "version": "2.0",
+  "app_name": "aws-batch-with-chalice",
+  "xray": true,
+  "stages": {
+    "local": {
+      "environment_variables" : {
+        "POWERTOOLS_SERVICE_NAME": "batches",
+        "LOG_LEVEL": "DEBUG"
+      }
+    },
+    "dev": {
+      "api_gateway_stage": "api"
+    }
+  }
+}

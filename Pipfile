@@ -1,0 +1,29 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+boto3 = "*"
+aws-lambda-powertools = "*"
+requests = "*"
+inject = "*"
+
+[dev-packages]
+chalice = "*"
+pytest = "*"
+autopep8 = "*"
+flake8 = "*"
+pytest-mock = "*"
+pytest-cov = "*"
+
+[requires]
+python_version = "3.9"
+
+[scripts]
+local= "chalice local --stage local --port 8081"
+deploy= "chalice deploy"
+format = "autopep8 -ivr ."
+lint = "flake8 --show-source ."
+test = "pytest tests/ -v --capture=no"
+batch = "python ./scripts/batch_runner.py"
